@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-dark': '#141212',
+                    },
+                    fontFamily: {
+                        'raleway': ['Raleway', 'sans-serif']
+                    },
+                }
+            }
+        }
+    </script>
+    <title>Fabian Holler</title>
+</head>
+
+<body class="bg-bg-dark text-white flex overflow-x-hidden">
+    <section id="landing" class="w-screen h-[200vh] overflow-hidden">
+        <div class="w-full flex justify-end">
+            <h1>
+                <span>Hi, I am</span> <br>
+                <span>Fabian Holler</span>
+            </h1>
+        </div>
+        <div class="mb-5 flex flex-col text-[2rem] font-raleway absolute bottom-0 w-screen items-center">
+            <div>
+                In a world full of ideas, I thrive in the
+            </div>
+            <div class="flex gap-16 h-[45vh] items-center">
+                <div class="flex items-center justify-end h-[45vh]">
+                    <svg class="h-[45vh]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 426 500">
+                        <path fill="#FF693A" d="M420.139 0C423.376 0 426 3.045 426 6.802v486.396c0 3.757-2.624 6.802-5.86 6.802H215.418C96.442 500 0 388.071 0 250S96.442 0 215.418 0h204.721Z"/>
+                    </svg>
+                    <svg class="absolute" xmlns="http://www.w3.org/2000/svg" width="174" height="211" fill="none" viewBox="0 0 174 211">
+                        <path fill="#141212" d="M171.606 0C172.928 0 174 1.285 174 2.87v205.26c0 1.585-1.072 2.87-2.393 2.87h-83.62C39.396 211 0 163.766 0 105.5S39.395 0 87.988 0h83.618Z"/>
+                    </svg>
+                </div>
+                <svg class="h-[45vh] w-[45vh]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 426 500">
+                    <ellipse cx="213" cy="250" fill="#FFB55F" rx="250" ry="250"/>
+                </svg>
+                <svg class="h-[45vh]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 426 500">
+                    <path fill="#46B181" d="M5.86 500C2.625 500 0 496.955 0 493.198V6.802C0 3.045 2.624 0 5.86 0h204.722C329.558 0 426 111.929 426 250c0 138.07-96.442 250-215.418 250H5.861Z"/>
+                </svg>
+                <svg class="h-[45vh]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 364 500">
+                    <path fill="#78C7D8" d="M214.552 500h142.271c3.966 0 7.177-3.748 7.177-8.372v-168.65c0-4.623-3.211-8.371-7.177-8.371h-35.352c-5.05 0-8.522-5.922-6.697-11.41l45.411-135.89c1.839-5.488-1.633-11.408-6.697-11.408H321.54c-5.064 0-8.55-5.961-6.67-11.457l45.233-132.986C361.969 5.961 358.497 0 353.419 0H214.552C96.064 0 0 111.929 0 250s96.064 250 214.552 250Z"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
