@@ -7,5 +7,3 @@ A
 public/style.css,c\1\c10e01865206f85032cf6199469b72569251c7f8
 =
 src/style.css,1\9\199c81d8625cb1aaa85a72e49e4ad72a9fed6766
-A
-public/index.html,f\4\f43ecdf8d666ee908aacce037b4cd72159e4741b
