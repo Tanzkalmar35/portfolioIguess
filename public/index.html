@@ -13,10 +13,12 @@
                 extend: {
                     colors: {
                         'bg-dark': '#141212',
+                        'highlight': '#FF774A',
                     },
                     fontFamily: {
                         'raleway': ['Raleway', 'sans-serif'],
                         'playfair': ['Playfair Display', 'serif']
+
                     },
                 }
             }
@@ -29,13 +31,14 @@
     <section id="landing" class="w-screen h-[200vh] overflow-hidden">
         <div class="flex justify-end">
             <h1>
-                <span>Hi, I am</span>
+                <span>Hi, I am</span> <br>
                 <span>Fabian Holler</span>
             </h1>
         </div>
-        <div class="absolute bottom-[52vh] left-[5vw] text-2xl flex flex-col font-playfair">
-            <span>In a world full of ideas, </span>
-            <span>I thrive in the</span>
+        <div class="absolute bottom-[52vh] left-[5vw] text-2xl flex font-playfair">
+            <p> In a world full of
+            <span class="text-highlight">ideas,</span>
+            I thrive in the </p>
         </div>
         <div class="mb-5 flex flex-col text-[2rem] font-raleway absolute bottom-0 w-screen items-center">
             <div class="flex gap-16 h-[45vh] items-center">
