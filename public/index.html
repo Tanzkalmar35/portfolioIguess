@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../src/style.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -13,7 +17,8 @@
                 extend: {
                     colors: {
                         'bg-dark': '#141212',
-                        'highlight': '#FF774A',
+                        'dark-highlight': '#666666',
+                        'highlight': '#fcce45',
                     },
                     fontFamily: {
                         'raleway': ['Raleway', 'sans-serif'],
@@ -35,10 +40,14 @@
                 <span>Fabian Holler</span>
             </h1>
         </div>
-        <div class="absolute bottom-[52vh] left-[5vw] text-2xl flex font-playfair">
-            <p> In a world full of
-            <span class="text-highlight">ideas,</span>
-            I thrive in the </p>
+        <div class="w-full absolute bottom-[52vh] left-[6vw] text-xl flex font-playfair">
+            <p>
+                Surrounded by innovation, I craft <br> solutions that
+                <span class="text-dark-highlight"> transcend the realm of ideas into</span>
+            </p>
+            <p class="ml-[20%]" id="scrollIndicator">
+                <span class="text-dark-highlight absolute bottom-0 self-center">scroll</span>
+            </p>
         </div>
         <div class="mb-5 flex flex-col text-[2rem] font-raleway absolute bottom-0 w-screen items-center">
             <div class="flex gap-16 h-[45vh] items-center">
