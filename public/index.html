@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../src/style.css">
+    <script src="../src/scripts/main.js"></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -34,9 +35,9 @@
 
 <body class="bg-bg-dark text-white flex overflow-x-hidden">
     <section id="landing" class="w-screen h-[200vh] overflow-hidden">
-        <div class="flex justify-end">
+        <div class="flex justify-end font-raleway text-[5rem] mr-[5vw] mt-[2vh]">
             <h1>
-                <span>Hi, I am</span> <br>
+                <span>Hi, I am </span> <br>
                 <span>Fabian Holler</span>
             </h1>
         </div>
@@ -46,7 +47,7 @@
                 <span class="text-dark-highlight"> transcend the realm of ideas into</span>
             </p>
             <p class="ml-[19%]" id="scrollIndicator">
-                <span class="text-dark-highlight absolute bottom-0 self-center">scroll</span>
+                <span id="landingScrollTrigger" class="text-dark-highlight absolute bottom-0 disabled cursor-pointer">scroll</span>
             </p>
         </div>
         <div class="mb-5 flex flex-col text-[2rem] font-raleway absolute bottom-0 w-screen items-center">
@@ -69,5 +70,9 @@
         </div>
     </section>
 </body>
+
+<script>
+    addAnimations();
+</script>
 
 </html>
