@@ -17,3 +17,12 @@
     opacity: .25;
   }
 }
+
+#cursorTrailer {
+  transition: opacity 500ms ease;
+}
+
+body:hover > #cursorTrailer {
+  opacity: 1;
+}
+
