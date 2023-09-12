@@ -1,20 +1,28 @@
-function addAnimations() {
-    let landingPageScrollTrigger = document.querySelector("#landingScrollTrigger");
+const mouseTrailer = document.querySelector("#cursorTrailer");
+const menuTrigger = document.querySelector(".menuTrigger");
+const landingPageScrollTrigger = document.querySelector("#landingScrollTrigger");
 
-    landingPageScrollTrigger.addEventListener("click", function () {
-        console.log("scrolling");
-        window.scrollTo(0, 0);
-    });
-}
+landingPageScrollTrigger.addEventListener("click", function () {window.scrollTo(0, 0)});
+
+menuTrigger.addEventListener("mouseenter", enterMenuTrigger);
+menuTrigger.addEventListener("mouseout", exitMenuTrigger);
 
 window.onmousemove = e => {
-
-  const mouseTrailer = document.getElementById("cursorTrailer");
-
-  const x = e.clientX - mouseTrailer.offsetWidth,
-        y = e.clientY - mouseTrailer.offsetHeight;
-
-  mouseTrailer.style.transform = `translate(${x}px, ${y}px)`;  
+  const x = e.clientX - mouseTrailer.offsetWidth / 2,
+        y = e.clientY - mouseTrailer.offsetHeight / 2;
+  const keyframes = {
+    transform: `translate(${x}px, ${y}px)`  
+  }
+  mouseTrailer.animate(keyframes, {
+      duration: 800,
+      fill: "forwards"
+  });
 }
 
-
+function enterMenuTrigger(event) {
+  if (event.target === menuTrigger) {
+    mouseTrailer.classList.add("w-[5rem]");
+    mouseTrailer.classList.add("h-[5rem]");
+    mouseTrailer.innerHTML -= ``;
+  }
+}
