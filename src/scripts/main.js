@@ -23,6 +23,11 @@ function enterMenuTrigger(event) {
   if (event.target === menuTrigger) {
     mouseTrailer.classList.add("w-[5rem]");
     mouseTrailer.classList.add("h-[5rem]");
-    mouseTrailer.innerHTML -= ``;
+    mouseTrailer.classList.add("text-black");
   }
 }
+
+function exitMenuTrigger() {
+    mouseTrailer.classList.remove("w-[5rem]");
+    mouseTrailer.classList.remove("h-[5rem]");
+  }
