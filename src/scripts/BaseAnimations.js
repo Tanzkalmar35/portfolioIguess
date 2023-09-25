@@ -29,4 +29,4 @@ function enterMenuTrigger(event) {
 function exitMenuTrigger() {
     mouseTrailer.classList.remove("w-[5rem]");
     mouseTrailer.classList.remove("h-[5rem]");
-  }
+}
