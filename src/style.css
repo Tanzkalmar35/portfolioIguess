@@ -2,22 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-#scrollIndicator {
-  animation: blink 2s infinite;
-}
-
-@keyframes blink {
-  0% {
-    opacity: .25;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: .25;
-  }
-}
-
 #cursorTrailer {
   transition: opacity 500ms ease;
 }
@@ -26,3 +10,7 @@ body:hover > #cursorTrailer {
   opacity: 1;
 }
 
+#enter-website:hover {
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
