@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Fabian Holler">
+    <meta name="keywords" content="Software development, ui, ux, js, html, css, portfolio">
+    <meta name="description" content="My personal portfolio website">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +20,8 @@
             theme: {
                 extend: {
                     colors: {
-                        'dark': '#000',
+                        'black': '#000',
+                        'white': '#fff',
                         'dark-highlight': '#666666',
                         'highlight': '#fcce45',
                         'green-accent': '#627265'
@@ -34,10 +38,45 @@
     <title>Fabian Holler</title>
 </head>
 
-<body class="bg-dark text-white overflow-hidden m-0">
-<div id="cursorTrailer" class="h-[20px] w-[20px] bg-white rounded-full fixed z-100 pointer-events-none opacity-0 hidden"></div>
+<body class="bg-black text-white overflow-hidden m-0 px-[5vw] py-[4vh]">
+<div id="cursorTrailer"
+     class="h-[20px] w-[20px] bg-white rounded-full fixed z-100 pointer-events-none opacity-0 hidden"></div>
 
 <!-- https://oxyco.webflow.io/ -->
+
+<main>
+    <header class="mb-[5vh] mx-[1vw] flex justify-center cursor-pointer">
+        <div class="h-[3rem] w-[3rem] px-[.9rem] py-[.9rem] bg-white rounded-full flex items-center justify-center">
+            <img src="https://uploads-ssl.webflow.com/64aad5363e57b0b9435969f7/64ab2b9c5575bed150c67316_Menu1.svg"
+                 loading="lazy" alt="menu">
+        </div>
+    </header>
+
+    <section id="landingpage" class="flex flex-col">
+        <div id="landingpage-content">
+            <div id="landingpage-title-name" class="ml-[5rem] text-[7rem] font-raleway uppercase absolute top-[12rem]">
+                Fabian Holler
+            </div>
+            <div id="landingpage-socials" class="flex">
+                <div id="landingpage-contact-email">
+
+                </div>
+                <div id="landingpage-profile">
+
+                </div>
+                <div id="landingpage-contact-links">
+
+                </div>
+            </div>
+            <div id="landingpage-title-jobtitle"
+                 class="mt-[4rem] text-[7rem] font-raleway uppercase absolute bottom-[12rem] right-[5vw]">
+                <h1 class="mr-[5rem]">
+                    tech developer
+                </h1>
+            </div>
+        </div>
+    </section>
+</main>
 
 <script src="../src/scripts/gsap.min.js"></script>
 <script src="../src/scripts/BaseAnimations.js"></script>
