@@ -8,9 +8,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./styles/Global.css">
 
@@ -27,9 +25,7 @@
                         'green-accent': '#627265'
                     },
                     fontFamily: {
-                        'raleway': ['Raleway', 'sans-serif'],
-                        'playfair': ['Playfair Display', 'serif'],
-                        'phudu': ['Phudu', 'cursive']
+                        'poppins-500': ['Poppins', 'sans-serif']
                     },
                 }
             }
@@ -38,47 +34,58 @@
     <title>Fabian Holler</title>
 </head>
 
-<body class="bg-black text-white overflow-hidden m-0 px-[5vw] py-[4vh]">
-<div id="cursorTrailer"
-     class="h-[20px] w-[20px] bg-white rounded-full fixed z-100 pointer-events-none opacity-0 hidden"></div>
+<body class="bg-black text-white overflow-x-hidden m-0">
 
 <!-- https://oxyco.webflow.io/ -->
 
-<main>
-    <header class="mb-[5vh] mx-[1vw] flex justify-center cursor-pointer">
-        <div class="h-[3rem] w-[3rem] px-[.9rem] py-[.9rem] bg-white rounded-full flex items-center justify-center">
-            <img src="https://uploads-ssl.webflow.com/64aad5363e57b0b9435969f7/64ab2b9c5575bed150c67316_Menu1.svg"
-                 loading="lazy" alt="menu">
+<header class="py-10 fixed left-[50%] top-[5%]">
+    <div class="h-[3rem] w-[3rem] px-[.9rem] bg-white rounded-full flex items-center justify-center cursor-pointer">
+        <img src="https://uploads-ssl.webflow.com/64aad5363e57b0b9435969f7/64ab2b9c5575bed150c67316_Menu1.svg"
+             loading="lazy" alt="menu">
+    </div>
+</header>
+
+<section id="landingpage" class="flex flex-col w-screen h-screen">
+    <div id="landingpage-content" class="w-full h-full flex flex-col items-start justify-between">
+        <div id="landingpage-title-name" class="text-[10rem] uppercase self-start mt-[15vh] ml-[7vw] mb-[-3vh]">
+            <h1>
+                Fabian H.
+            </h1>
         </div>
-    </header>
-
-    <section id="landingpage" class="flex flex-col">
-        <div id="landingpage-content">
-            <div id="landingpage-title-name" class="ml-[5rem] text-[7rem] font-raleway uppercase absolute top-[12rem]">
-                Fabian Holler
-            </div>
-            <div id="landingpage-socials" class="flex">
-                <div id="landingpage-contact-email">
-
-                </div>
-                <div id="landingpage-profile">
-
-                </div>
-                <div id="landingpage-contact-links">
-
-                </div>
-            </div>
-            <div id="landingpage-title-jobtitle"
-                 class="mt-[4rem] text-[7rem] font-raleway uppercase absolute bottom-[12rem] right-[5vw]">
-                <h1 class="mr-[5rem]">
-                    tech developer
+        <div id="landingpage-socials" class="self-center grid text-2xl items-center">
+            <div id="landingpage-contact-email" class="">
+                <h1 class="">
+                    fabianholler@protonmail.com
                 </h1>
             </div>
+            <div id="landingpage-profile"
+                 class="w-[16rem] h-[16rem] rounded-full flex items-center justify-center mx-20">
+                <img src="https://uploads-ssl.webflow.com/64aad5363e57b0b9435969f7/64ac0c002f04f0ef754fdb6e_ox1.jpg"
+                     loading="lazy" alt="" class="rounded-full w-[15rem]">
+            </div>
+            <div id="landingpage-contact-links" class="flex items-center gap-10">
+                <a href="https://github.com/Tanzkalmar35" target="_blank">
+                    <img id="links-github" src="./assets/img/github.svg" alt="Github"
+                         class="w-[3rem] h-[3rem] cursor-pointer"/>
+                </a>
+                <a href="mailto:fabianholler@protonmail.com" target="_blank">
+                    <img id="links-mail" src="./assets/img/mail.svg" alt="Mail"
+                         class="w-[3rem] h-[3rem] cursor-pointer"/>
+                </a>
+            </div>
         </div>
-    </section>
-</main>
+        <div id="landingpage-title-jobtitle"
+             class="text-[10rem] uppercase self-end mb-[15vh] mr-[7vw] mt-[-2vh]">
+            <h1>
+                Ctrl+C Pro
+            </h1>
+        </div>
+    </div>
+</section>
+<section class="w-screen h-screen">
+    fsjdfkl
+</section>
 
-<script src="../src/scripts/gsap.min.js"></script>
-<script src="../src/scripts/BaseAnimations.js"></script>
+<script type="module" src="../src/scripts/BaseAnimations.js"></script>
 </body>
 </html>
