@@ -1,26 +1,20 @@
 
-// Gsap landing page animation
+// Gsap landing page animations
 
 const screenWidth = window.innerWidth;
 
-let tl = gsap.timeline({
+let leftAnimation = gsap.timeline({
     scrollTrigger: {
-        trigger: '#landingpage-title-name',
+        trigger: ['.animate-slideout-left'],
+        scrub: 1,
         start: '0',
         end: screenWidth,
-        scrub: true,
-        markers: true
+        pin: document.querySelector("#body-content")
     }
 })
 
-tl.to('#landingpage-title-name', {
+leftAnimation.to(".animate-slideout-left", {
     x: -900,
-    onStart: () => {
-        document.querySelector("#everything").style.position = 'fixed';
-    },
-    onComplete: () => {
-        document.querySelector("#everything").style.position = 'relative';
-    }
 })
 
 // Lenis smooth scrolling
