@@ -5,6 +5,8 @@ const screenHeight = window.innerHeight;
 
 const aboutPageTitleHeight = document.querySelector("#about-page-title").getBoundingClientRect().height;
 
+// landing page
+
 let scrollAnimation = gsap.timeline({
     scrollTrigger: {
         scrub: 1,
@@ -48,6 +50,9 @@ scrollAnimation.add(animateContactEmail, 0)
 scrollAnimation.add(animateContactLinks, 0)
 scrollAnimation.add(animateTitleJobTitle, 0)
 scrollAnimation.add(increaseLandingPageImageSize, 0)
+
+// About page
+
 scrollAnimation.add(animateSecondSection, 1)
 
 // Lenis smooth scrolling
