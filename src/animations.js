@@ -37,7 +37,7 @@ let animateContactLinks = gsap.to("#landingpage-contact-links", {
 });
 
 let increaseLandingPageImageSize = gsap.to("#landingpage-profile", {
-    scale: 1.2,
+    scale: 1.4,
     duration: 1
 })
 
