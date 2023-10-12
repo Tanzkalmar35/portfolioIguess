@@ -6,6 +6,10 @@ h1 {
     font-family: 'Poppins', sans-serif;
 }
 
+p {
+    font-family: "Lato", sans-serif;
+}
+
 header {
     transform: translate(-50%, -50%);
 }
