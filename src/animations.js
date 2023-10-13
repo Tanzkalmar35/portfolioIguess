@@ -27,12 +27,12 @@ let animateContactEmail = gsap.to("#landingpage-contact-email", {
 });
 
 let animateTitleJobTitle = gsap.to("#landingpage-title-jobtitle", {
-    x: 1200,
+    x: 1300,
     duration: 1
 });
 
 let animateContactLinks = gsap.to("#landingpage-contact-links", {
-    x: 1200,
+    x: 1300,
     duration: .7
 });
 

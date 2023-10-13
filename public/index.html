@@ -21,9 +21,7 @@
                     colors: {
                         'black': '#000',
                         'white': '#fff',
-                        'dark-highlight': '#666666',
-                        'highlight': '#fcce45',
-                        'green-accent': '#627265'
+                        'dark-highlight': '#888',
                     },
                     fontFamily: {
                         'poppins-500': ['Poppins', 'sans-serif'],
@@ -50,14 +48,17 @@
 
     <section id="landingpage" class="flex flex-col w-screen h-screen">
         <div id="landingpage-content" class="w-full h-full flex flex-col items-start justify-between">
-            <div id="landingpage-title-name" class="text-[10rem] uppercase self-start mt-[15vh] ml-[7vw] mb-[-3vh]">
+            <div id="landingpage-title-name" class="text-[10rem] uppercase self-start mt-[15vh] ml-[7vw] mb-[-3vh] flex gap-5">
                 <h1>
-                    Fabian H.
+                    Fabian
                 </h1>
+                <h3 class="text-[2rem] mt-12 text-dark-highlight">
+                    Holler
+                </h3>
             </div>
             <div id="landingpage-socials" class="self-center grid text-2xl items-center">
                 <div id="landingpage-contact-email">
-                    <h1 class="">
+                    <h1>
                         fabianholler@protonmail.com
                     </h1>
                 </div>
@@ -78,9 +79,12 @@
                 </div>
             </div>
             <div id="landingpage-title-jobtitle"
-                 class="text-[10rem] uppercase self-end mb-[15vh] mr-[7vw] mt-[-2vh]">
+                 class="text-[10rem] uppercase self-end mb-[15vh] mr-[7vw] mt-[-2vh] flex gap-5">
+                <h3 class="text-[2rem] mt-12 text-dark-highlight">
+                    copy-paste
+                </h3>
                 <h1>
-                    Ctrl+C Pro
+                    Developer
                 </h1>
             </div>
         </div>
@@ -95,16 +99,18 @@
                 </div>
                 <div id="about-page-intro" class="px-[8vw] mt-[35vh]">
                     <p class="text-[4rem] ">
-                        Passionate software developer from Germany. 
-                        Balancing school and work, 
-                        I thrive on elegant code and innovative projects. 
-                        Join me in exploring the world of software development.
+                        <span>
+                            Dedicated software developer crafting elegant
+                        </span>
+                        <span class="text-dark-highlight">
+                            and modern software solutions with meticulous attention to detail 
+                            and a passion for innovation.
+                        </span>
                     </p>
                 </div>
             </div>
         </div>
     </section>
-
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
