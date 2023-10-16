@@ -65,35 +65,3 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf)
-
-// Something other animations?
-//! Kill me (It just takes the first h1), also, make the name auto-replaced.
-document.querySelector("h1").onmouseover = e => randomLetterAnimation("Fabian H.", e.target)
-
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-let interval = null;
-
-function randomLetterAnimation(name, element) {
-
-    let iteration = 0;
-
-    clearInterval(interval);
-
-    interval = setInterval(() => {
-        element.innerHTML = name
-            .split("")
-            .map((letter, index) => {
-                if (index < iteration) {
-                    return name.split("")[index];
-                }
-                return letters[Math.floor(Math.random() * 26)]
-            })
-            .join("");
-
-        if (iteration >= name.split("").length) {
-            clearInterval(interval);
-        }
-
-        iteration += 1 / 3;
-    }, 30);
-}
