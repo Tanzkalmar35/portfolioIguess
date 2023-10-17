@@ -20,6 +20,7 @@
                 extend: {
                     colors: {
                         'black': '#000',
+                        'background': '#141414',
                         'white': '#fff',
                         'dark-highlight': '#888',
                     },
@@ -34,84 +35,33 @@
     <title>Fabian Holler</title>
 </head>
 
-<body class="bg-black text-white overflow-hidden m-0">
+<body class="bg-background text-white overflow-hidden m-0 p-0 w-screen h-screen">
 
-<div class="w-fit h-fit" id="body-content">
-    <!-- https://oxyco.webflow.io/ -->
+<div class="w-fit h-fit" id="page-content">
+    <!-- https://camillemormal.com/about -->
 
-    <header class="py-10 fixed left-[50%] top-[5%]">
-        <div class="h-[3rem] w-[3rem] px-[.9rem] bg-white rounded-full flex items-center justify-center cursor-pointer">
-            <img alt="menu"
-                 loading="lazy"
-                 src="https://uploads-ssl.webflow.com/64aad5363e57b0b9435969f7/64ab2b9c5575bed150c67316_Menu1.svg">
-        </div>
-    </header>
+    <div class="w-screen h-fit flex justify-center gap-14 mt-10">
+        <a class="cursor-pointer" href="/about">
+            <h2>
+                about
+            </h2>
+        </a>
+        <a class="cursor-pointer" href="/work">
+            <h2>
+                work
+            </h2>
+        </a>
+    </div>
 
-    <section class="flex flex-col w-screen h-screen" id="landingpage">
-        <div class="w-full h-full flex flex-col items-start justify-between" id="landingpage-content">
-            <div class="text-[10rem] uppercase self-start mt-[15vh] ml-[7vw] mb-[-3vh] flex gap-5"
-                 id="landingpage-title-name">
-                <h1>
-                    Fabian H.
-                </h1>
-            </div>
-            <div class="self-center grid text-2xl items-center" id="landingpage-socials">
-                <div id="landingpage-contact-email">
-                    <h1>
-                        fabianholler@protonmail.com
-                    </h1>
-                </div>
-                <div class="w-[16rem] h-[16rem] rounded-full flex items-center justify-center mx-20"
-                     id="landingpage-profile">
-                    <img alt=""
-                         class="rounded-full w-[15rem]" loading="lazy"
-                         src="https://uploads-ssl.webflow.com/64aad5363e57b0b9435969f7/64ac0c002f04f0ef754fdb6e_ox1.jpg">
-                </div>
-                <div class="flex items-center gap-10" id="landingpage-contact-links">
-                    <a href="https://github.com/Tanzkalmar35" target="_blank">
-                        <img alt="Github" class="w-[3rem] h-[3rem] cursor-pointer" id="links-github"
-                             src="./assets/img/github.svg"/>
-                    </a>
-                    <a href="mailto:fabianholler@protonmail.com" target="_blank">
-                        <img alt="Mail" class="w-[3rem] h-[3rem] cursor-pointer" id="links-mail"
-                             src="./assets/img/mail.svg"/>
-                    </a>
-                </div>
-            </div>
-            <div class="text-[10rem] uppercase self-end mb-[15vh] mr-[7vw] mt-[-2vh] flex gap-5"
-                 id="landingpage-title-jobtitle">
-                <h1>
-                    Developer
-                </h1>
-            </div>
-        </div>
-    </section>
-    <section class="w-screen h-screen">
-        <div id="about-page-container">
-            <div class="flex">
-                <div class="text-[10rem] uppercase self-start ml-[7vw]" id="about-page-title">
-                    <h1>
-                        About
-                    </h1>
-                </div>
-                <div class="px-[8vw] mt-[35vh]" id="about-page-intro"><p class="text-[4rem] ">
-                        <span>
-                            Dedicated software developer crafting elegant
-                        </span>
-                    <span class="text-dark-highlight">
-                            and modern software solutions with meticulous attention to detail
-                            and a passion for innovation.
-                        </span>
-                </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div>
+        This is the main page
+    </div>
+
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.26/bundled/lenis.min.js"></script>
-<script src="../src/animations.js" type="module"></script>
+<script src="src/animations.js" type="module"></script>
 </body>
 </html>
