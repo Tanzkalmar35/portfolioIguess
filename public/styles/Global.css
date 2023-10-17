@@ -3,21 +3,5 @@
 @tailwind utilities;
 
 h1, h2, h3 {
-    font-family: 'Poppins', sans-serif; 
-}
-
-p {
-    font-family: "Lato", sans-serif;
-}
-
-header {
-    transform: translate(-50%, -50%);
-}
-
-#landingpage-profile {
-    background: linear-gradient(205deg, #fff 15%, #000 80%);
-}
-
-#landingpage-socials {
-    grid-template-columns: 1fr auto 1fr;
+    font-family: 'Poppins', sans-serif;
 }
