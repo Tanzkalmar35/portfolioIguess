@@ -4,7 +4,7 @@ const screenHeight = window.innerHeight;
 // Gsap animations
 let scrollAnimation = gsap.timeline({
     scrollTrigger: {
-        scrub: 1,
+        scrub: 2,
         start: '0',
         end: screenWidth,
         pin: document.querySelector("#workpage-content")
