@@ -5,3 +5,7 @@
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
 }
+
+#image-containers {
+    transform: translate(0%, -50%);
+}

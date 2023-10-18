@@ -30,26 +30,37 @@
 
     <title>Fabian Holler | My Work</title>
 </head>
-<body class="bg-background text-white">
-<div class="w-fit h-fit" id="page-content">
+<body class="bg-background text-white overflow-x-hidden">
+<div class="w-screen h-fit flex justify-center gap-14 mt-10 fixed">
+    <a class="cursor-pointer" href="/about">
+        <h2>
+            about
+        </h2>
+    </a>
+    <a class="cursor-pointer" href="/work">
+        <h2>
+            work
+        </h2>
+    </a>
+</div>
+<div class="w-screen h-screen flex items-center left-[50%]" id="workpage-content">
 
-    <div class="w-screen h-fit flex justify-center gap-14 mt-10">
-        <a class="cursor-pointer" href="/about">
-            <h2>
-                about
-            </h2>
-        </a>
-        <a class="cursor-pointer" href="/work">
-            <h2>
-                work
-            </h2>
-        </a>
+
+    <div class="[&>*]:w-[40vmin] [&>*]:h-[56vmin] [&>*]:object-cover [&>*]:object-right flex gap-[4vmin]"
+         id="image-container">
+        <!-- TODO: Fill with mockups of projects -->
+        <img alt="handy" class="sliding-image" src="../assets/img/handy.jpg"/>
+        <img alt="linux" class="sliding-image" src="../assets/img/linux.jpg"/>
+        <img alt="office" class="sliding-image" src="../assets/img/office.jpg"/>
+        <img alt="openai" class="sliding-image" src="../assets/img/openai.jpg"/>
+        <img alt="pi" class="sliding-image" src="../assets/img/pi.jpg"/>
+        <img alt="somecode" class="sliding-image" src="../assets/img/somecode.jpg"/>
     </div>
 
-    <div>
-        This is the work page
-    </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.26/bundled/lenis.min.js"></script>
+    <script src="../animations.js" type="module"></script>
 </div>
 </body>
 </html>
