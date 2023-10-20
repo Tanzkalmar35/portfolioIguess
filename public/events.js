@@ -1,8 +1,7 @@
-const images = document.getElementsByClassName("sliding-image");
+const images = document.querySelectorAll(".sliding-image");
 
-images.addEventListener("click", (event) => {
-    console.log("TARGET CLICKED")
-    let element = event.target;
-    element.classList.add('w-screen')
-    element.classList.add('h-screen')
-})
+images.forEach(function (element) {
+    element.addEventListener('click', function () {
+        alert('image clicked: ' + element);
+    });
+});
