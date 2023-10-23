@@ -49,15 +49,16 @@
     <div class="[&>*]:w-[40vmin] [&>*]:h-[56vmin] [&>*]:object-cover [&>*]:object-right flex gap-[4vmin]"
          id="image-container">
         <!-- TODO: Fill with mockups of projects -->
-        <img alt="handy" class="sliding-image" onclick="expandImage(this)" src="../assets/img/handy.jpg"/>
-        <img alt="linux" class="sliding-image" onclick="expandImage(this)" src="../assets/img/linux.jpg"/>
-        <img alt="office" class="sliding-image" onclick="expandImage(this)" src="../assets/img/office.jpg"/>
-        <img alt="openai" class="sliding-image" onclick="expandImage(this)" src="../assets/img/openai.jpg"/>
-        <img alt="pi" class="sliding-image" onclick="expandImage(this)" src="../assets/img/pi.jpg"/>
-        <img alt="somecode" class="sliding-image" onclick="expandImage(this)" src="../assets/img/somecode.jpg"/>
+        <img alt="handy" class="sliding-image" src="../assets/img/handy.jpg"/>
+        <img alt="linux" class="sliding-image" src="../assets/img/linux.jpg"/>
+        <img alt="office" class="sliding-image" src="../assets/img/office.jpg"/>
+        <img alt="openai" class="sliding-image" src="../assets/img/openai.jpg"/>
+        <img alt="pi" class="sliding-image" src="../assets/img/pi.jpg"/>
+        <img alt="somecode" class="sliding-image" src="../assets/img/somecode.jpg"/>
     </div>
 
     <div class="hidden fixed bottom-0 right-0 w-screen h-screen overflow-hidden" id="full-screen-container">
+        <img alt="handy" class="sliding-image" id="fullscreen-handy-image" src="../assets/img/handy.jpg"/>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -65,45 +66,5 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.26/bundled/lenis.min.js"></script>
     <script src="../animations.js" type="module"></script>
 </div>
-<script>
-    //TODO: Improve by: Make it smoother, abstract it
-    function expandImage(image) {
-        const fullScreenContainer = document.getElementById("full-screen-container");
-        const fullScreenImage = document.createElement("img");
-        fullScreenImage.src = image.src;
-        fullScreenImage.classList.add("w-screen", "h-screen", "object-cover", "object-right");
-
-        fullScreenContainer.innerHTML = '';
-        fullScreenContainer.appendChild(fullScreenImage);
-
-        gsap.to(fullScreenImage, {
-            width: "100%",
-            height: "100%",
-            duration: 2,
-            onComplete: () => {
-                // Scroll handler to reverse the animation on scroll
-                window.addEventListener('scroll', reverseAnimation);
-            },
-        });
-
-        fullScreenContainer.classList.remove("hidden");
-    }
-
-    function reverseAnimation() {
-        const fullScreenContainer = document.getElementById("full-screen-container");
-        const fullScreenImage = fullScreenContainer.querySelector("img");
-
-        gsap.to(fullScreenImage, {
-            width: 0,
-            height: 0,
-            onComplete: () => {
-                // Remove the full-screen image and event listener
-                fullScreenContainer.innerHTML = '';
-                fullScreenContainer.classList.add("hidden");
-                window.removeEventListener('scroll', reverseAnimation);
-            },
-        });
-    }
-</script>
 </body>
 </html>
