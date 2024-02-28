@@ -10,6 +10,7 @@
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
 
     <link href="./styles/Global.css" rel="stylesheet">
 
@@ -26,6 +27,7 @@
                     fontFamily: {
                         'poppins-500': ['Poppins', 'sans-serif'],
                         'lato': ['Lato', 'sans-serif'],
+                        'caveat': ['Caveat', 'cursive'],
                     },
                 }
             }
@@ -39,6 +41,10 @@
 <div class="w-fit h-fit" id="body-content">
     <!-- https://oxyco.webflow.io/ -->
 
+    <div class="rounded-full bg-white w-5 h-5 z-10000 fixed" id="cursor">
+
+    </div>
+
     <header class="py-10 fixed left-[50%] top-[5%]">
         <div class="h-[3rem] w-[3rem] px-[.9rem] bg-white rounded-full flex items-center justify-center cursor-pointer">
             <img alt="menu"
@@ -49,11 +55,19 @@
 
     <section class="flex flex-col w-screen h-screen" id="landingpage">
         <div class="w-full h-full flex flex-col items-start justify-between" id="landingpage-content">
-            <div class="text-[10rem] uppercase self-start mt-[15vh] ml-[7vw] mb-[-3vh] flex gap-5"
+            <div class="text-[9rem] self-start mt-[15vh] ml-[7vw] mb-[-3vh] flex flex-col"
                  id="landingpage-title-name">
-                <h1>
-                    Fabian H.
-                </h1>
+                <p class="mb-[-3vh] font-caveat text-4xl text-dark-highlight">
+                    Hi, I'm
+                </p>
+                <div class="flex items-end">
+                    <h1 class="uppercase">
+                        Fabian Holler
+                    </h1>
+                    <p class="font-caveat text-9xl text-dark-highlight mb-5">
+                        ,
+                    </p>
+                </div>
             </div>
             <div class="self-center grid text-2xl items-center" id="landingpage-socials">
                 <div id="landingpage-contact-email">
@@ -78,10 +92,13 @@
                     </a>
                 </div>
             </div>
-            <div class="text-[10rem] uppercase self-end mb-[15vh] mr-[7vw] mt-[-2vh] flex gap-5"
+            <div class="text-[9rem] self-end mb-[15vh] mr-[7vw] mt-[-2vh] flex flex-col"
                  id="landingpage-title-jobtitle">
-                <h1>
-                    Developer
+                <p class="mb-[-3vh] mt-[5vh] font-caveat text-4xl text-dark-highlight">
+                    a passionate
+                </p>
+                <h1 class="uppercase">
+                    Code Artisan
                 </h1>
             </div>
         </div>
@@ -94,15 +111,16 @@
                         About
                     </h1>
                 </div>
-                <div class="px-[8vw] mt-[35vh]" id="about-page-intro"><p class="text-[4rem] ">
+                <div class="px-[8vw] mt-[35vh]" id="about-page-intro">
+                    <p class="text-[4rem] ">
                         <span>
                             Dedicated software developer crafting elegant
                         </span>
-                    <span class="text-dark-highlight">
+                        <span class="text-dark-highlight">
                             and modern software solutions with meticulous attention to detail
                             and a passion for innovation.
                         </span>
-                </p>
+                    </p>
                 </div>
             </div>
         </div>
