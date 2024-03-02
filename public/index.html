@@ -14,6 +14,8 @@
 
     <link href="./styles/Global.css" rel="stylesheet">
 
+    <script src="../src/index.js"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -36,22 +38,24 @@
     <title>Fabian Holler</title>
 </head>
 
-<body class="bg-black text-white overflow-hidden m-0">
+<body class="bg-black text-white overflow-hidden m-0" data-nav="false">
+
+<button class="w-[5rem] h-[5rem] fixed left-[50vw] top-[90vh] bg-[#B68E71] rounded-full border-none cursor-pointer
+        outline-none flex items-center justify-center" id="menu" onclick="toggleNav()" type="button">
+    <img alt="menu" class="open" loading="lazy"
+         src="./assets/img/menu-open.svg">
+    <img alt="menu" class="close" loading="lazy"
+         src="./assets/img/menu-close.svg">
+</button>
 
 <div class="w-fit h-fit" id="body-content">
-    <!-- https://oxyco.webflow.io/ -->
+    <!-- https://oxyco.webflow.io/
 
     <div class="rounded-full bg-white w-5 h-5 z-10000 fixed" id="cursor">
 
     </div>
 
-    <header class="py-10 fixed left-[50%] top-[5%]">
-        <div class="h-[3rem] w-[3rem] px-[.9rem] bg-white rounded-full flex items-center justify-center cursor-pointer">
-            <img alt="menu"
-                 loading="lazy"
-                 src="https://uploads-ssl.webflow.com/64aad5363e57b0b9435969f7/64ab2b9c5575bed150c67316_Menu1.svg">
-        </div>
-    </header>
+    -->
 
     <section class="flex flex-col w-screen h-screen" id="landingpage">
         <div class="w-full h-full flex flex-col items-start justify-between" id="landingpage-content">
@@ -98,7 +102,7 @@
                     a passionate
                 </p>
                 <h1 class="uppercase">
-                    Code Artisan
+                    Programmer
                 </h1>
             </div>
         </div>
@@ -112,7 +116,7 @@
                     </h1>
                 </div>
                 <div class="px-[8vw] mt-[35vh]" id="about-page-intro">
-                    <p class="text-[4rem] ">
+                    <p class="text-[4rem]">
                         <span>
                             Dedicated software developer crafting elegant
                         </span>
