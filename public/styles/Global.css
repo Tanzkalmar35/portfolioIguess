@@ -13,7 +13,7 @@ body:not([data-nav="true"]) > #menu:hover > .open {
 }
 
 * {
-    /*cursor: none;*/
+    cursor: none;
 }
 
 h1, h2, h3 {
