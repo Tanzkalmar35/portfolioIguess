@@ -59,7 +59,7 @@ const scroll = () => {
     });
 }
 
-// Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
+// Preload images, apply scroll-triggered animations, and remove loading class from body
 preloadImages('.column__item-img').then(() => {
     scroll();
     document.body.classList.remove('loading');

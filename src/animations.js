@@ -1,3 +1,5 @@
+// https://webdesign.tutsplus.com/scrolling-website-with-locomotive-scroll-tailwind-css--cms-36943t
+
 //? Cursor animation
 const cursorDot = document.getElementById("cursor");
 window.addEventListener("mousemove", function (e) {
