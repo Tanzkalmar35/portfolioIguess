@@ -1,4 +1,31 @@
-// https://webdesign.tutsplus.com/scrolling-website-with-locomotive-scroll-tailwind-css--cms-36943t
+//? Background switch animation
+const sectionColor = document.querySelectorAll("[data-bgcolor]");
+
+ScrollTrigger.create({
+
+    trigger: '#projects',
+    markers: true,
+    start: "top -150%",
+    end: "bottom 0%",
+
+    onEnter: () => {
+        gsap.to('#projects', {duration: 1.0, backgroundColor: '#B68E71'});
+        gsap.to('#menu', {duration: 1.0, backgroundColor: '#000'});
+        document.getElementById("open-menu-btn").classList.add("hidden");
+        document.getElementById("open-menu-btn-white").classList.remove("hidden");
+        document.getElementById("close-menu-btn").classList.add("hidden");
+        document.getElementById("close-menu-btn-white").classList.remove("hidden");
+    },
+
+    onLeaveBack: () => {
+        gsap.to('#projects', {duration: 1.0, backgroundColor: '#000'})
+        gsap.to('#menu', {duration: 1.0, backgroundColor: '#B68E71'});
+        document.getElementById("open-menu-btn").classList.remove("hidden");
+        document.getElementById("open-menu-btn-white").classList.add("hidden");
+        document.getElementById("close-menu-btn").classList.remove("hidden");
+        document.getElementById("close-menu-btn-white").classList.add("hidden");
+    },
+})
 
 //? Cursor animation
 const cursorDot = document.getElementById("cursor");
@@ -7,8 +34,8 @@ window.addEventListener("mousemove", function (e) {
     const posX = e.clientX;
     const posY = e.clientY;
 
-    cursorDot.style.left = `${posX}px`;
-    cursorDot.style.top = `${posY}px`;
+//    cursorDot.style.left = `${posX}px`;
+//    cursorDot.style.top = `${posY}px`;
 });
 
 //?  Gsap landing page animations
@@ -49,7 +76,6 @@ let increaseLandingPageImageSize = gsap.to("#landingpage-profile", {
 let animateSecondSection = gsap.to("#about-page-container", {
     y: -(screenHeight / 2) - (aboutPageTitleHeight / 2),
 })
-
 scrollAnimation.add(animateTitleName, 0)
 scrollAnimation.add(animateContactEmail, 0)
 scrollAnimation.add(animateContactLinks, 0)
@@ -70,3 +96,5 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf)
+
+//? projects section
