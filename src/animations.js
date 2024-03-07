@@ -1,10 +1,7 @@
 //? Background switch animation
-const sectionColor = document.querySelectorAll("[data-bgcolor]");
-
 ScrollTrigger.create({
 
     trigger: '#projects',
-    markers: true,
     start: "top -150%",
     end: "bottom 0%",
 
@@ -98,3 +95,27 @@ function raf(time) {
 requestAnimationFrame(raf)
 
 //? projects section
+gsap.to(".marquee-part", {
+    xPercent: -100,
+    repeat: -1,
+    duration: 5,
+    ease: "linear"
+}).totalProgress(0.5);
+
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", function () {
+    let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScrollTop > lastScrollTop) {
+        document.querySelectorAll(".marquee-arrow").forEach((arrow) => {
+            arrow.classList.add("active")
+            arrow.classList.remove("inactive")
+        });
+    } else {
+        document.querySelectorAll(".marquee-arrow").forEach((arrow) => {
+            arrow.classList.remove("active")
+            arrow.classList.add("inactive")
+        });
+    }
+    lastScrollTop = currentScrollTop;
+}, false);
