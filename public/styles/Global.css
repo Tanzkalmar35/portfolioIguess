@@ -12,10 +12,6 @@ body:not([data-nav="true"]) > #menu:hover > .open {
     transform: translate(-50%, -50%) scale(.9);
 }
 
-* {
-    cursor: none;
-}
-
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
 }
