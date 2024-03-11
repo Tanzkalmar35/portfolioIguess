@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="Fabian Holler" name="author">
-    <meta content="Software development, ui, ux, js, html, css, portfolio" name="keywords">
+    <meta content="Software development, ui, ux, js, html, css, portfolio, gsap" name="keywords">
     <meta content="My personal portfolio website" name="description">
 
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
 
     <link href="./styles/Global.css" rel="stylesheet">
 
@@ -30,6 +31,7 @@
                         'poppins-500': ['Poppins', 'sans-serif'],
                         'lato': ['Lato', 'sans-serif'],
                         'caveat': ['Caveat', 'cursive'],
+                        'zen-dots': ['Zen Dots', 'cursive'],
                     },
                 }
             }
@@ -42,10 +44,14 @@
 
 <button class="w-[5rem] h-[5rem] fixed left-[50vw] top-[90vh] bg-[#B68E71] rounded-full border-none cursor-pointer
         outline-none flex items-center justify-center" id="menu" onclick="toggleNav()" type="button">
-    <img alt="menu" class="open" loading="lazy"
+    <img alt="menu" class="open" id="open-menu-btn" loading="lazy"
          src="./assets/img/menu-open.svg">
-    <img alt="menu" class="close" loading="lazy"
+    <img alt="menu" class="close" id="close-menu-btn" loading="lazy"
          src="./assets/img/menu-close.svg">
+    <img alt="menu" class="open hidden" id="open-menu-btn-white" loading="lazy"
+         src="./assets/img/menu-open-white.svg">
+    <img alt="menu" class="close hidden" id="close-menu-btn-white" loading="lazy"
+         src="./assets/img/menu-close-white.svg">
 </button>
 
 <div class="w-fit h-fit" id="body-content">
@@ -75,7 +81,7 @@
                 </div>
                 <div class="w-[16rem] h-[16rem] rounded-full flex items-center justify-center mx-20"
                      id="landingpage-profile">
-                    <img alt=""
+                    <img alt="me"
                          class="rounded-full w-[15rem]" loading="lazy"
                          src="https://uploads-ssl.webflow.com/64aad5363e57b0b9435969f7/64ac0c002f04f0ef754fdb6e_ox1.jpg">
                 </div>
@@ -122,6 +128,30 @@
                             to complex problems.
                         </span>
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="w-screen h-screen bg-black" id="projects">
+        <div class="bg-black text-[#B68E71] flex flex-row text-7xl px-[5vw] whitespace-nowrap" id="marquee-title">
+            <div class="marquee-part flex items-center font-zen-dots uppercase">
+                My Projects
+                <div class="marquee-arrow">
+                    <img alt="arrow" class="w-[5rem] h-[5rem] mx-[2em] ml-[1em]" src="./assets/img/arrow.svg"/>
+                </div>
+            </div>
+            <div class="marquee-part flex items-center font-zen-dots uppercase">
+                My Projects
+                <div>
+                    <img alt="arrow" class="marquee-arrow w-[5rem] h-[5rem] mx-[2em] ml-[1em]"
+                         src="./assets/img/arrow.svg"/>
+                </div>
+            </div>
+            <div class="marquee-part flex items-center font-zen-dots uppercase">
+                My Projects
+                <div class="marquee-arrow">
+                    <img alt="arrow" class="marquee-arrow w-[5rem] h-[5rem] mx-[2em] ml-[1em]"
+                         src="./assets/img/arrow.svg"/>
                 </div>
             </div>
         </div>
