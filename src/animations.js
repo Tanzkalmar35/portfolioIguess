@@ -95,7 +95,6 @@ function raf(time) {
 requestAnimationFrame(raf)
 
 //? projects section
-// TODO: Create a better banner
 gsap.to(".marquee-part", {
     xPercent: -100,
     repeat: -1,
