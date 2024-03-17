@@ -56,7 +56,6 @@
 
 <div class="w-fit h-fit" id="body-content">
     <!-- https://oxyco.webflow.io/ -->
-
     <section class="flex flex-col w-screen h-screen" id="landingpage">
         <div class="w-full h-full flex flex-col items-start justify-between" id="landingpage-content">
             <div class="text-[9rem] self-start mt-[15vh] ml-[7vw] mb-[-3vh] flex flex-col"
@@ -107,7 +106,7 @@
             </div>
         </div>
     </section>
-    <section class="w-screen h-screen" id="about">
+    <section class="w-screen h-fit" id="about">
         <div id="about-page-container">
             <div class="flex">
                 <div class="text-[10rem] self-start ml-[7vw]" id="about-page-title">
@@ -132,30 +131,35 @@
             </div>
         </div>
     </section>
-    <section class="w-screen h-screen bg-black" id="projects">
-        <div class="bg-black text-[#B68E71] flex flex-row text-7xl px-[5vw] whitespace-nowrap" id="marquee-title">
-            <div class="marquee-part flex items-center font-zen-dots uppercase">
-                My Projects
-                <div class="marquee-arrow">
-                    <img alt="arrow" class="w-[5rem] h-[5rem] mx-[2em] ml-[1em]" src="./assets/img/arrow.svg"/>
+    <section class="w-screen h-screen bg-black mt-[-30vh]" id="projects">
+        <div class="w-screen h-fit flex" id="flying-banners">
+            <div class="ml-[-120vw]" id="banners-left">
+                <div class="w-fit h-fit px-[3rem] banner bg-white text-black text-[6rem] font-lato uppercase whitespace-nowrap mt-[-10vh]"
+                     id="banner-1">
+                    Where Imagination Comes to Life
+                </div>
+                <div class="w-fit h-fit px-[3rem] banner bg-white text-black text-[6rem] font-lato uppercase whitespace-nowrap mt-[50vh]"
+                     id="banner-2">
+                    Java • JavaScript • TypeScript • Rust • HTML • CSS
+                </div>
+                <div class="w-fit h-fit px-[3rem] banner bg-white text-black text-[6rem] font-lato uppercase whitespace-nowrap mt-[-25vh]"
+                     id="banner-3">
+                    Exploring the Depths of My Creativity
                 </div>
             </div>
-            <div class="marquee-part flex items-center font-zen-dots uppercase">
-                My Projects
-                <div>
-                    <img alt="arrow" class="marquee-arrow w-[5rem] h-[5rem] mx-[2em] ml-[1em]"
-                         src="./assets/img/arrow.svg"/>
+            <div class="ml-[100vw] mt-[15vh]" id="banners-right">
+                <div class="w-fit h-fit px-[3rem] banner bg-white text-black text-[6rem] font-lato uppercase whitespace-nowrap"
+                     id="banner-4">
+                    Where My Coding Fantasies Take Flight
                 </div>
-            </div>
-            <div class="marquee-part flex items-center font-zen-dots uppercase">
-                My Projects
-                <div class="marquee-arrow">
-                    <img alt="arrow" class="marquee-arrow w-[5rem] h-[5rem] mx-[2em] ml-[1em]"
-                         src="./assets/img/arrow.svg"/>
+                <div class="w-fit h-fit px-[3rem] banner bg-white text-black text-[6rem] font-lato uppercase whitespace-nowrap mt-[40vh]"
+                     id="banner-5">
+                    Enjoy the view!
                 </div>
             </div>
         </div>
     </section>
+    <section class="bg-white w-screen h-screen"></section>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

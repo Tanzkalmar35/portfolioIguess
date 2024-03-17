@@ -1,29 +1,3 @@
-//? Background switch animation
-ScrollTrigger.create({
-
-    trigger: '#projects',
-    start: "top -150%",
-    end: "bottom 0%",
-
-    onEnter: () => {
-        gsap.to('#projects', {duration: 1.0, backgroundColor: '#B68E71'});
-        gsap.to('#menu', {duration: 1.0, backgroundColor: '#000'});
-        document.getElementById("open-menu-btn").classList.add("hidden");
-        document.getElementById("open-menu-btn-white").classList.remove("hidden");
-        document.getElementById("close-menu-btn").classList.add("hidden");
-        document.getElementById("close-menu-btn-white").classList.remove("hidden");
-    },
-
-    onLeaveBack: () => {
-        gsap.to('#projects', {duration: 1.0, backgroundColor: '#000'})
-        gsap.to('#menu', {duration: 1.0, backgroundColor: '#B68E71'});
-        document.getElementById("open-menu-btn").classList.remove("hidden");
-        document.getElementById("open-menu-btn-white").classList.add("hidden");
-        document.getElementById("close-menu-btn").classList.remove("hidden");
-        document.getElementById("close-menu-btn-white").classList.add("hidden");
-    },
-})
-
 //? Cursor animation
 const cursorDot = document.getElementById("cursor");
 window.addEventListener("mousemove", function (e) {
@@ -95,27 +69,36 @@ function raf(time) {
 requestAnimationFrame(raf)
 
 //? projects section
-gsap.to(".marquee-part", {
-    xPercent: -100,
-    repeat: -1,
-    duration: 5,
-    ease: "linear"
-}).totalProgress(0.5);
 
-let lastScrollTop = 0;
-
-window.addEventListener("scroll", function () {
-    let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (currentScrollTop > lastScrollTop) {
-        document.querySelectorAll(".marquee-arrow").forEach((arrow) => {
-            arrow.classList.add("active")
-            arrow.classList.remove("inactive")
-        });
-    } else {
-        document.querySelectorAll(".marquee-arrow").forEach((arrow) => {
-            arrow.classList.remove("active")
-            arrow.classList.add("inactive")
-        });
+let bannerAnimation = gsap.timeline({
+    scrollTrigger: {
+        scrub: 1, start: screenHeight * 3, end: "+=1500", trigger: "#projects"
     }
-    lastScrollTop = currentScrollTop;
-}, false);
+})
+
+let banner1 = gsap.to("#banner-1", {
+    x: screenWidth * 2.5, y: "+=700"
+})
+
+let banner2 = gsap.to("#banner-2", {
+    x: screenWidth * 2, y: "-=400"
+})
+
+
+let banner3 = gsap.to("#banner-3", {
+    x: screenWidth * 2.5, y: "+=200"
+})
+
+let banner4 = gsap.to("#banner-4", {
+    x: -screenWidth * 2.5
+})
+
+let banner5 = gsap.to("#banner-5", {
+    x: -screenWidth * 1.5, y: "-=500"
+})
+
+bannerAnimation.add(banner1, 0)
+bannerAnimation.add(banner2, 0)
+bannerAnimation.add(banner3, 0)
+bannerAnimation.add(banner4, 0)
+bannerAnimation.add(banner5, 0)
