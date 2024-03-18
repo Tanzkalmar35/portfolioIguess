@@ -42,11 +42,12 @@ let animateContactLinks = gsap.to("#landingpage-contact-links", {
 
 let increaseLandingPageImageSize = gsap.to("#landingpage-profile", {
     scale: 1.4, duration: 1
-})
+});
 
 let animateSecondSection = gsap.to("#about-page-container", {
     y: -(screenHeight / 2) - (aboutPageTitleHeight / 2),
-})
+});
+
 scrollAnimation.add(animateTitleName, 0)
 scrollAnimation.add(animateContactEmail, 0)
 scrollAnimation.add(animateContactLinks, 0)
