@@ -73,7 +73,7 @@ requestAnimationFrame(raf)
 
 let bannerAnimation = gsap.timeline({
     scrollTrigger: {
-        scrub: 1, start: screenHeight * 3, end: "+=1500", trigger: "#projects"
+        scrub: 1, start: screenHeight * 2.5, end: "+=1500", trigger: "#projects"
     }
 })
 
