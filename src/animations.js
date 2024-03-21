@@ -78,24 +78,24 @@ let bannerAnimation = gsap.timeline({
 })
 
 let banner1 = gsap.to("#banner-1", {
-    x: screenWidth * 2.5, y: "+=700"
+    x: screenWidth * 2, y: "+=700"
 })
 
 let banner2 = gsap.to("#banner-2", {
-    x: screenWidth * 2, y: "-=400"
+    x: screenWidth * 1.5, y: "-=700"
 })
 
 
 let banner3 = gsap.to("#banner-3", {
-    x: screenWidth * 2.5, y: "+=200"
+    x: screenWidth * 2, y: "+=200"
 })
 
 let banner4 = gsap.to("#banner-4", {
-    x: -screenWidth * 2.5
+    x: -screenWidth * 3
 })
 
 let banner5 = gsap.to("#banner-5", {
-    x: -screenWidth * 1.5, y: "-=500"
+    x: -screenWidth * 2, y: "-=500"
 })
 
 bannerAnimation.add(banner1, 0)

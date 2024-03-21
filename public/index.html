@@ -24,7 +24,7 @@
                 extend: {
                     colors: {
                         'black': '#000',
-                        'white': '#fff',
+                        'white': '#fdf4dc',
                         'dark-highlight': '#888',
                     },
                     fontFamily: {
@@ -42,7 +42,7 @@
 
 <body class="bg-black text-white overflow-hidden m-0" data-nav="false">
 
-<button class="w-[5rem] h-[5rem] fixed left-[50vw] top-[90vh] bg-[#B68E71] rounded-full border-none cursor-pointer
+<button class="w-[5rem] h-[5rem] fixed left-[50vw] top-[90vh] bg-white rounded-full border-none cursor-pointer
         outline-none flex items-center justify-center" id="menu" onclick="toggleNav()" type="button">
     <img alt="menu" class="open" id="open-menu-btn" loading="lazy"
          src="./assets/img/menu-open.svg">
@@ -131,35 +131,37 @@
             </div>
         </div>
     </section>
-    <section class="w-screen h-screen bg-black mt-[-30vh]" id="projects">
-        <div class="w-screen h-fit flex" id="flying-banners">
+    <section class="w-screen h-screen mt-[-30vh] text-[#222222]" id="projects">
+        <div class="w-screen h-fit flex font-bold" id="flying-banners">
             <div class="ml-[-120vw]" id="banners-left">
-                <div class="w-fit h-fit px-[3rem] banner bg-white text-black text-[6rem] font-lato uppercase whitespace-nowrap mt-[-10vh]"
+                <div class="w-fit h-fit px-[3rem] banner bg-[#fdf4dc] text-[8rem] font-poppins-500 uppercase whitespace-nowrap"
                      id="banner-1">
-                    Where Imagination Comes to Life
+                    Ctrl + C • Ctrl + V • Ctrl + S
                 </div>
-                <div class="w-fit h-fit px-[3rem] banner bg-white text-black text-[6rem] font-lato uppercase whitespace-nowrap mt-[50vh]"
+                <div class="w-fit h-fit px-[3rem] banner bg-white text-[8rem] font-poppins-500 uppercase whitespace-nowrap mt-[60vh]"
                      id="banner-2">
                     Java • JavaScript • TypeScript • Rust • HTML • CSS
                 </div>
-                <div class="w-fit h-fit px-[3rem] banner bg-white text-black text-[6rem] font-lato uppercase whitespace-nowrap mt-[-25vh]"
+                <div class="w-fit h-fit px-[3rem] banner bg-white text-[8rem] font-poppins-500 uppercase whitespace-nowrap mt-[-35vh]"
                      id="banner-3">
-                    Exploring the Depths of My Creativity
+                    ...And call it work
                 </div>
             </div>
             <div class="ml-[100vw] mt-[15vh]" id="banners-right">
-                <div class="w-fit h-fit px-[3rem] banner bg-white text-black text-[6rem] font-lato uppercase whitespace-nowrap"
+                <div class="w-fit h-fit px-[3rem] banner bg-white text-[8rem] font-poppins-500 uppercase whitespace-nowrap"
                      id="banner-4">
-                    Where My Coding Fantasies Take Flight
+                    See how I waste my time...
                 </div>
-                <div class="w-fit h-fit px-[3rem] banner bg-white text-black text-[6rem] font-lato uppercase whitespace-nowrap mt-[40vh]"
+                <div class="w-fit h-fit px-[3rem] banner bg-white text-[8rem] font-poppins-500 uppercase whitespace-nowrap mt-[60vh]"
                      id="banner-5">
-                    Enjoy the view!
+                    Ok, enough!!!
                 </div>
             </div>
+            <p></p>Projects
         </div>
     </section>
-    <section class="bg-white w-screen h-screen"></section>
+    <section class="bg-black w-screen h-screen"></section>
+
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

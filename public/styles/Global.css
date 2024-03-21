@@ -72,7 +72,7 @@ p {
 }
 
 #banner-2 {
-    transform: rotate(-8deg);
+    transform: rotate(-15deg);
 }
 
 #banner-3 {
@@ -80,5 +80,5 @@ p {
 }
 
 #banner-5 {
-    transform: rotate(15deg);
+    transform: rotate(7deg);
 }
