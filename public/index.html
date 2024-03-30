@@ -42,6 +42,7 @@
 
 <body class="bg-black text-white overflow-hidden m-0" data-nav="false">
 
+
 <button class="w-[5rem] h-[5rem] fixed left-[50vw] top-[90vh] bg-white rounded-full border-none cursor-pointer
         outline-none flex items-center justify-center" id="menu" onclick="toggleNav()" type="button">
     <img alt="menu" class="open" id="open-menu-btn" loading="lazy"
@@ -55,6 +56,8 @@
 </button>
 
 <div class="w-fit h-fit" id="body-content">
+    <div class="bg-white w-[10vw] absolute left-[50%] top-[50%] rounded-full" id="cursor-blob"></div>
+    <div class="w-screen h-screen absolute z-2" id="blur"></div>
     <!-- https://oxyco.webflow.io/ -->
     <section class="flex flex-col w-screen h-screen" id="landingpage">
         <div class="w-full h-full flex flex-col items-start justify-between" id="landingpage-content">
@@ -123,8 +126,8 @@
                             I'm a 19-year-old software developer from Germany,
                         </span>
                         <span class="text-dark-highlight">
-                            who is passionate about creating and developing solutions
-                            to complex problems.
+                            who is passionate about developing solutions
+                            to complex problems and create cool stuff.
                         </span>
                     </p>
                 </div>
@@ -159,22 +162,60 @@
             </div>
         </div>
     </section>
-    <section class="w-screen h-fit flex" id="projects-intro">
+    <section class="w-screen h-fit flex hidden" id="projects-intro">
         <div class="text-[10rem] self-start ml-[7vw]">
             <p class="mb-[-3vh] mt-[5vh] font-caveat text-4xl text-dark-highlight">
-                Let's have a look at my
+                Let's have a look at some of my
             </p>
             <h1 class="uppercase w-auto" id="projects-title">
                 Projects
             </h1>
         </div>
     </section>
-    <section class="w-fit h-screen" id="projects">
-        <div class="w-screen h-screen">
-            project-1
+    <section class="flex border-t-2 border-white" id="projects">
+        <div class="w-[50vw] h-screen" id="slider-left">
+            <div class="h-screen flex flex-col items-center justify-center">
+                <h1 class="text-[10rem] font-poppins-500 uppercase">
+                    Project 1
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
+                </p>
+            </div>
+            <div class="h-screen flex flex-col items-center justify-center">
+                <h1 class="text-[10rem] font-poppins-500 uppercase">
+                    Project 2
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
+                </p>
+            </div>
+            <div class="h-screen flex flex-col items-center justify-center">
+                <h1 class="text-[10rem] font-poppins-500 uppercase">
+                    Project 3
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
+                </p>
+            </div>
+            <div class="h-screen flex flex-col items-center justify-center">
+                <h1 class="text-[10rem] font-poppins-500 uppercase">
+                    Project 4
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
+                </p>
+            </div>
         </div>
-        <div class="w-screen h-screen">
-            project-2
+        <div class="w-[50vw] h-screen">
+            <div id="slider-right">
+                <div class="w-[35rem] h-[35rem] bg-white absolute left-[50vw] mt-[22vh] rounded-[2rem]"
+                     id="slider-right-1">ars
+                </div>
+                <div class="w-[35rem] h-[35rem] bg-dark-highlight absolute left-[50vw] mt-[22vh] rounded-[2rem]"></div>
+                <div class="w-[35rem] h-[35rem] bg-[#00ff00] absolute left-[50vw] mt-[22vh] rounded-[2rem]"></div>
+                <div class="w-[35rem] h-[35rem] bg-[#ffff00] absolute left-[50vw] mt-[22vh] rounded-[2rem]"></div>
+            </div>
         </div>
     </section>
 </div>

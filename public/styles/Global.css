@@ -20,6 +20,31 @@ p {
     font-family: "Lato", sans-serif;
 }
 
+#cursor-blob {
+    aspect-ratio: 1;
+    translate: -50% -50%;
+    background: linear-gradient(to right, aquamarine, mediumpurple);
+    animation: rotate 20s infinite;
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 1.5;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+#blur {
+    backdrop-filter: blur(100px);
+}
+
 #landingpage-profile {
     background: linear-gradient(205deg, #fff 15%, #000 80%);
 }

@@ -1,13 +1,16 @@
 //? Cursor animation
-const cursorDot = document.getElementById("cursor");
-window.addEventListener("mousemove", function (e) {
+const cursorBlob = document.getElementById("cursor-blob");
 
+document.onpointermove = e => {
     const posX = e.clientX;
     const posY = e.clientY;
+    console.log(posX, posY)
 
-//    cursorDot.style.left = `${posX}px`;
-//    cursorDot.style.top = `${posY}px`;
-});
+    cursorBlob.animate({
+        left: `${posX}px`,
+        top: `${posY}px`
+    }, {duration: 3000, fill: "forwards"})
+}
 
 //?  Gsap landing page animations
 
@@ -103,3 +106,12 @@ bannerAnimation.add(banner2, 0)
 bannerAnimation.add(banner3, 0)
 bannerAnimation.add(banner4, 0)
 bannerAnimation.add(banner5, 0)
+
+const sliderRight = document.querySelector("#slider-right")
+
+ScrollTrigger.create({
+    trigger: "#projects",
+    start: "top top",
+    end: "bottom bottom",
+    pin: "#slider-right-1",
+})
