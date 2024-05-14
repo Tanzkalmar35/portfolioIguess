@@ -8,7 +8,7 @@ document.onpointermove = e => {
 
     cursorBlob.animate({
         left: `${posX}px`,
-        top: `${posY}px`
+        top: `${posY}px`,
     }, {duration: 3000, fill: "forwards"})
 }
 
@@ -107,11 +107,12 @@ bannerAnimation.add(banner3, 0)
 bannerAnimation.add(banner4, 0)
 bannerAnimation.add(banner5, 0)
 
-const sliderRight = document.querySelector("#slider-right")
-
-ScrollTrigger.create({
-    trigger: "#projects",
-    start: "top top",
-    end: "bottom bottom",
-    pin: "#slider-right-1",
-})
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#slider-left",
+        pin: "#slider-right",
+        start: "top top", // when the top of the trigger hits the top of the viewport
+        end: "bottom bottom", // when the bottom of the trigger hits the bottom of the viewport
+        scrub: true
+    }
+});
