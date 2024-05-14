@@ -7,4 +7,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="gsap" level="application" />
   </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="9ca15666-61e3-47ee-a2bf-956779408b2a" />
+  </component>
 </module>
